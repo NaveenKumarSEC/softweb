@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Chandru Restaurant</title>
+    <link rel="icon" href="logos.jpg">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #fafafa;
+            color: #333;
+        }
+        .navbar {
+            background: #2c3e50;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+        }
+        .navbar a {
+            float: left;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 18px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .navbar a:hover, .navbar a.active {
+            background: #34495e;
+            color: #1abc9c;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: whitesmoke;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-weight: 700;
+            border-bottom: 3px solid #1abc9c;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 15px 0 6px;
+            font-weight: 600;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            resize: vertical;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #1abc9c;
+            outline: none;
+            box-shadow: 0 0 4px #1abc9c;
+        }
+        textarea {
+            min-height: 100px;
+        }
+        button {
+            margin-top: 25px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #16a085;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+        <a href="feedback.html" class="active">Feedback</a>
+    </div>
+
+    <div class="container">
+        <h2>Feedback</h2>
+        <form action="#" method="post">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+            <label for="rating">How would you rate us? *</label>
+            <select id="rating" name="rating" required>
+                <option value="" disabled selected>Select rating</option>
+                <option value="5">Excellent - 5</option>
+                <option value="4">Very Good - 4</option>
+                <option value="3">Good - 3</option>
+                <option value="2">Fair - 2</option>
+                <option value="1">Poor - 1</option>
+            </select>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" placeholder="Your valuable feedback or suggestions"></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
